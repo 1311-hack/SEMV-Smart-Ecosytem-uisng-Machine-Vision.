@@ -34,7 +34,7 @@ nearest_grid_color = (255, 255, 255)
 grid_status = [[False for j in range(num_grid_cols)] for i in range(num_grid_rows)]
 grid_status_main = [[False for j in range(num_grid_cols)] for i in range(num_grid_rows)]
 
-
+#initializing counters for delay
 counter_1 = 0
 counter_2 = 0
 counter_3 = 0
@@ -114,60 +114,60 @@ while True:
                 # Mark all grid cells as OFF
                 grid_status = [[False for j in range(num_grid_cols)] for i in range(num_grid_rows)]
 
-    #grid status update
+    #grid status update using fps
     if grid_status[0][0] == grid_status_main[0][0]:
         counter_1 = 0
     else:
         counter_1 += 1
-        if counter_1 >= 40:
+        if counter_1 >= 400:
             grid_status_main[0][0] = grid_status[0][0]
     if grid_status[0][1] == grid_status_main[0][1]:
         counter_2 = 0
     else:
         counter_2 += 1
-        if counter_2 >= 40:
+        if counter_2 >= 400:
             grid_status_main[0][1] = grid_status[0][1]
     if grid_status[0][2] == grid_status_main[0][2]:
         counter_3 = 0
     else:
         counter_3 += 1
-        if counter_3 >= 40:
+        if counter_3 >= 400:
             grid_status_main[0][2] = grid_status[0][2]
     if grid_status[1][0] == grid_status_main[1][0]:
         counter_4 = 0
     else:
         counter_4 += 1
-        if counter_4 >= 40:
+        if counter_4 >= 400:
             grid_status_main[1][0] = grid_status[1][0]
     if grid_status[1][1] == grid_status_main[1][1]:
         counter_5 = 0
     else:
         counter_5 += 1
-        if counter_5 >= 40:
+        if counter_5 >= 400:
             grid_status_main[1][1] = grid_status[1][1]
     if grid_status[1][2] == grid_status_main[1][2]:
         counter_6 = 0
     else:
         counter_6 += 1
-        if counter_6 >= 40:
+        if counter_6 >= 400:
             grid_status_main[1][2] = grid_status[1][2]
     if grid_status[2][0] == grid_status_main[2][0]:
         counter_7 = 0
     else:
         counter_7 += 1
-        if counter_7 >= 40:
+        if counter_7 >= 400:
             grid_status_main[2][0] = grid_status[2][0]
     if grid_status[2][1] == grid_status_main[2][1]:
         counter_8 = 0
     else:
         counter_8 += 1
-        if counter_8 >= 40:
+        if counter_8 >= 400:
             grid_status_main[2][1] = grid_status[2][1]
     if grid_status[2][2] == grid_status_main[2][2]:
         counter_9 = 0
     else:
         counter_9 += 1
-        if counter_9 >= 40:
+        if counter_9 >= 400:
             grid_status_main[2][2] = grid_status[2][2]
     counter = 0
     #switch status update
